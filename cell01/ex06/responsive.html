@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;              /* ตารางยืดเต็มจอ */
+            height: 100vh;            /* ความสูงเต็มหน้าจอ */
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 5vw;           /* ตัวอักษรปรับตามขนาดจอ */
+        }
+        td {
+            width: 50%;
+            color: white;
+            font-weight: bold;
+        }
+        .cell1 {
+            background-color: olive;
+        }
+        .cell2 {
+            background-color: tomato;
+        }
+
+        /* 📱 Responsive สำหรับจอเล็ก (มือถือ) */
+        @media (max-width: 600px) {
+            table, tr, td {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            td {
+                padding: 40px 0;
+                font-size: 8vw; /* ใหญ่ขึ้นเวลาอยู่บนมือถือ */
+            }
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td class="cell1">First cell</td>
+            <td class="cell2">Second cell</td>
+        </tr>
+    </table>
+</body>
+</html>
